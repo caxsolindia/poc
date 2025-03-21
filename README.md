@@ -6,6 +6,9 @@ This project sets up an **Azure Kubernetes Service (AKS)** cluster using **Terra
 ---  
 
 ## **Architecture**  
+
+![image](https://github.com/user-attachments/assets/05efa126-bce7-4126-8263-b3545cabb9b1)
+
 The architecture consists of the following key components:  
 
 ### **User Interaction**  
