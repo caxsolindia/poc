@@ -22,9 +22,7 @@ A pull request (PR) to Azure Repos Git triggers the PR pipeline, executing the f
 A successful merge into the main repository triggers the CI pipeline, performing:
 
 1. **PR Pipeline Tasks:** All validations from the PR pipeline are repeated.
-2. **Integration Tests:**
-   - Requires secrets retrieved securely from Azure Key Vault.
-3. **Containerization:**
+2. **Containerization:**
    - A validated build generates a container image.
    - The image is published to Azure Container Registry (ACR).
 
@@ -43,9 +41,6 @@ The CD pipeline deploys a YAML-based configuration to the designated Azure Kuber
 1. **Image Pull:** The latest container image from ACR is pulled.
 2. **Deployment Execution:** The YAML template is applied to the appropriate AKS environment.
 3. **Acceptance Testing:** Automated tests validate the deployment.
-4. **Manual Approval (if required):**
-   - If acceptance tests pass, an optional manual validation step may be required.
-   - In some cases, automatic deployment proceeds without intervention.
 
 ## Environment-Specific Deployment Matrix
 
@@ -60,6 +55,4 @@ The CD pipeline deploys a YAML-based configuration to the designated Azure Kuber
 - **PR Pipeline:** Ensures quality before merging code.
 - **CI Pipeline:** Builds, tests, and publishes container images.
 - **CD Pipeline:** Deploys applications seamlessly to AKS environments.
-
-This robust CI/CD workflow guarantees a streamlined, reliable, and scalable software delivery process.
 
