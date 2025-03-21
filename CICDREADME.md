@@ -5,6 +5,9 @@ This document outlines the automated CI/CD pipeline process for Azure Repos Git.
 
 ## Data Flow
 
+![image](https://github.com/user-attachments/assets/80ade95d-a8b8-4d65-a3c3-901c9fe1a993)
+
+
 ### PR Pipeline
 A pull request (PR) to Azure Repos Git triggers the PR pipeline, executing the following steps:
 
